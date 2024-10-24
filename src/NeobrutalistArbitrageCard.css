@@ -1,0 +1,78 @@
+.neobrutalist-card {
+    width: 350px;
+    border: 4px solid #000;
+    background-color: #fff;
+    box-shadow: 8px 8px 0 0 #000;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .neobrutalist-card:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 6px 6px 0 0 #000;
+  }
+  
+  .card-header {
+    border-bottom: 4px solid #000;
+    padding: 16px;
+  }
+  
+  .card-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  
+  .card-opportunity-type {
+    font-size: 16px;
+    color: #4169e1;
+    margin-top: 8px;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  .card-description {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .card-links {
+    margin-top: 12px;
+  }
+  
+  .market-link {
+    display: inline-block;
+    margin-right: 8px;
+    background-color: #ffa500;
+    padding: 4px 8px;
+    color: #000;
+    border: 2px solid #000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .card-footer {
+    padding: 16px;
+    border-top: 4px solid #000;
+  }
+  
+  .card-button {
+    background-color: #32cd32;
+    color: #000;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0 0 #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .card-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 0 #000;
+  }
+  
