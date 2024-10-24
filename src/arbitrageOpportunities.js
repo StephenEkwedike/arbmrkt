@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from 'axios'
 
 // URLs for APIs
 const predictitURL = 'https://www.predictit.org/api/marketdata/all/';
