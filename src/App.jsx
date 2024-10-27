@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import NeobrutalistArbitrageCard from './NeobrutalistArbitrageCard';
+import Page from './Page';
 import { findArbitrageOpportunities } from './arbitrageOpportunities';
 
 function App() {
   const [opportunities, setOpportunities] = useState([]);
+  const [darkMode, setDarkMode] = useState(false);
 
   const loadOpportunities = async () => {
     const fetchedOpportunities = await findArbitrageOpportunities();
@@ -21,21 +22,18 @@ function App() {
     setOpportunities(prev => prev.map(o => (o.marketName === marketName ? refreshedOpportunity : o)));
   };
 
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    document.documentElement.classList.toggle('dark');
+  };
+
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', padding: '20px' }}>
-      {opportunities.map((opportunity) => (
-        <NeobrutalistArbitrageCard
-          key={opportunity.marketName}
-          marketName={opportunity.marketName}
-          opportunityType={opportunity.opportunityType}
-          totalCost={opportunity.totalCost}
-          gainChance={opportunity.gainChance}
-          predictitLink={opportunity.predictitLink}
-          polymarketLink={opportunity.polymarketLink}
-          onRefresh={() => handleRefresh(opportunity.marketName)}
-        />
-      ))}
-    </div>
+    <Page
+      opportunities={opportunities}
+      onRefresh={handleRefresh}
+      darkMode={darkMode}
+      toggleDarkMode={toggleDarkMode}
+    />
   );
 }
 
