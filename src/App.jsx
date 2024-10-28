@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Page from './Page';
+// import Page from './Page';
+import Page from "./LandingPage";
 import { findArbitrageOpportunities } from './arbitrageOpportunities';
 
 function App() {
